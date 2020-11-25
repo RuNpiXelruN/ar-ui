@@ -1,5 +1,5 @@
 <template>
-    <div class="event-card-wrapper" :class="cardBoxShadow" @mouseover="showViewEvent(true)" @mouseleave="showViewEvent(false)" v-click-outside="closeMenu">
+    <div class="event-card-wrapper" :class="cardBoxShadow" @mouseover="showViewEvent(true)" @mouseleave="showViewEvent(false)" v-click-outside="closeMenu" @keyup.esc="closeMenu" tabindex="0">
         <div class="menu-dots" @click="toggleMenu"></div>
         <div class="card-menu-wrapper" :class="menuOpenCSS" @mouseleave="closeMenu">
             <div class="card-menu-triangle"></div>
@@ -108,6 +108,10 @@ $card-primary-text-grey: #43516B;
     @media screen and (max-width: $media-mob) {
         margin: 10px 0px;
         width: 300px;
+    }
+
+    &:focus {
+        outline: none;
     }
 
     .menu-dots {
