@@ -38,12 +38,12 @@ export default {
         align-items: center;
         justify-content: center;
         width: calc(90% + 42px);
-        padding-top: 24px;
+        padding-top: 26px;
         max-width: 1280px;
         margin-top: 110px;
 
         @media screen and (max-width: $media-iPad) {
-            margin-top: 169px;
+            margin-top: 164px;
         }
 
         @media screen and (max-width: $media-iPad) and (orientation: landscape) {
