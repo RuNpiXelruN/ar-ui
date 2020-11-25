@@ -116,12 +116,12 @@ $card-primary-text-grey: #43516B;
 
     .menu-dots {
         background: url('~@/assets/menu-dots.svg') no-repeat;
-        background-position-x: 10px;
-        width: 20px;
-        height: 20px;
+        background-position: 26px 22px;
+        width: 50px;
+        height: 60px;
         position: absolute;
-        top: 20px;
-        right: 15px;
+        top: 0px;
+        right: 0px;
         z-index: 15;
         cursor: pointer;
     }
