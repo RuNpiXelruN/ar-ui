@@ -1,5 +1,5 @@
 <template>
-    <div class="event-card-wrapper" :class="cardBoxShadow" @mouseover="showViewEvent(true)" @mouseleave="showViewEvent(false)">
+    <div class="event-card-wrapper" :class="cardBoxShadow" @mouseover="showViewEvent(true)" @mouseleave="showViewEvent(false)" v-click-outside="closeMenu">
         <div class="menu-dots" @click="toggleMenu"></div>
         <div class="card-menu-wrapper" :class="menuOpenCSS" @mouseleave="closeMenu">
             <div class="card-menu-triangle"></div>
