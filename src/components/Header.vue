@@ -29,6 +29,7 @@ export default {
 
 $media-iPad: 767px;
 $media-mob: 478px;
+$header-grey: #43516B;
 $card-border-grey: #DCDEE4;
 $input-green: #2DC26A;
 
@@ -59,16 +60,21 @@ $input-green: #2DC26A;
         padding-top: 6px;
         padding-bottom: 31px;
     }
+    
+    @media screen and (max-width: $media-iPad) and (orientation: landscape) {
+        position: relative;
+    }
 
     @media screen and (max-width: $media-mob) {
         width: 95%;
+        position: relative;
     }
 
     h1 {
         @include fontBody;
         font-size: 30px;
         line-height: 33px;
-        color: #43516B;
+        color: $header-grey;
         text-align: left;
 
         @media screen and (max-width: $media-iPad) {
@@ -99,7 +105,7 @@ $input-green: #2DC26A;
 
             @media screen and (max-width: $media-iPad) {
                 flex-grow: 1;
-            }
+            }            
 
             .search-icon {
                 background: url('~@/assets/search-icon.svg') no-repeat;
@@ -109,20 +115,28 @@ $input-green: #2DC26A;
                 width: 36px;
                 display: block;
                 position: absolute;
+
+                @media screen and (max-width: $media-mob) {
+                    display: none;
+                }
             }
             .search-input {
                 @include fontBody;
                 font-size: 14px;
                 border: none;
                 width: 300px;
+                color: $header-grey;
                 line-height: 48px;
                 border-radius: 4px;
-                padding-left: 36px;
-                margin-top: 0;        /* to remove default top/bottom margin in Safari */
-                margin-bottom: 0;     /* to remove default top/bottom margin in Safari */
+                padding-left: 38px;
+                margin: 0 !important;  /* to remove default top/bottom margin in Safari */
 
                 @media screen and (max-width: $media-iPad) {
                     width: 100%;
+                }
+
+                @media screen and (max-width: $media-mob) {
+                    padding-left: 10px;
                 }
 
                 &::placeholder {      /* Chrome, Firefox, Opera, Safari 10.1+ */

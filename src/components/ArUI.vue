@@ -30,6 +30,7 @@ export default {
 <style lang="scss" scoped>
     
     $media-iPad: 767px;
+    $media-mob: 478px;
 
     .ui-wrapper {
         display: flex;
@@ -43,6 +44,14 @@ export default {
 
         @media screen and (max-width: $media-iPad) {
             margin-top: 169px;
+        }
+
+        @media screen and (max-width: $media-iPad) and (orientation: landscape) {
+            margin-top: 0px;
+        }
+        
+        @media screen and (max-width: $media-mob) {
+            margin-top: 1px;
         }
 
         &::after {
