@@ -37,8 +37,8 @@ export default {
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
-        width: calc(90% + 40px);
-        padding-top: 20px;
+        width: calc(90% + 42px);
+        padding-top: 24px;
         max-width: 1280px;
         margin-top: 110px;
 

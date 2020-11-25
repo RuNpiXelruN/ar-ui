@@ -101,7 +101,7 @@ $card-primary-text-grey: #43516B;
     justify-content: center;
     border-radius: 4px;
     width: 380px;
-    margin: 15px 20px;
+    margin: 15px 21px;
     position: relative;
     transition: all 0.3s ease;
 

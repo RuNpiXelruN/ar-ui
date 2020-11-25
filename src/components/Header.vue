@@ -49,8 +49,8 @@ $input-green: #2DC26A;
     justify-content: space-between;
     width: 90%;
     border-bottom: 1px solid $card-border-grey;
-    padding: 20px 0;
-    max-width: 1220px;
+    padding: 26px 0 20px;
+    max-width: 1222px;
     position: fixed;
     top: 0;
     z-index: 20;
@@ -67,6 +67,7 @@ $input-green: #2DC26A;
 
     @media screen and (max-width: $media-mob) {
         width: 95%;
+        padding-top: 2px;
         position: relative;
     }
 
@@ -110,7 +111,7 @@ $input-green: #2DC26A;
             .search-icon {
                 background: url('~@/assets/search-icon.svg') no-repeat;
                 background-size: contain;
-                background-position: center;
+                background-position-x: 15px;
                 height: 17px;
                 width: 36px;
                 display: block;
@@ -128,7 +129,7 @@ $input-green: #2DC26A;
                 color: $header-grey;
                 line-height: 48px;
                 border-radius: 4px;
-                padding-left: 38px;
+                padding-left: 44px;
                 margin: 0 !important;  /* to remove default top/bottom margin in Safari */
 
                 @media screen and (max-width: $media-iPad) {
@@ -161,14 +162,14 @@ $input-green: #2DC26A;
             font-size: 14px;
             line-height: 14px;
             background: #7344C0;
-            padding: 19px 24px;
+            padding: 19px 28px 19px 24px;
             border-radius: 3px;
             border: none;
             cursor: pointer;
             transition: background 0.2s ease;
 
             @media screen and (max-width: $media-iPad) {
-                padding: 19px 50px;
+                padding: 19px 52px;
 
                 .create-button-span, img {
                     display: none;
@@ -187,7 +188,7 @@ $input-green: #2DC26A;
                 width: 15px;
                 height: 15px;
                 margin-bottom: -3px;
-                margin-right: 10px;
+                margin-right: 8px;
             }
         }
     }
