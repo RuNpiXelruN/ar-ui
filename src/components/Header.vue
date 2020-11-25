@@ -49,7 +49,7 @@ $input-green: #2DC26A;
     justify-content: space-between;
     width: 90%;
     border-bottom: 1px solid $card-border-grey;
-    padding: 26px 0 20px;
+    padding: 26px 1px 20px;
     max-width: 1222px;
     position: fixed;
     top: 0;
