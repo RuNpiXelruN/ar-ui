@@ -28,6 +28,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+    
+    $media-iPad: 767px;
+
     .ui-wrapper {
         display: flex;
         flex-flow: row wrap;
@@ -37,6 +40,10 @@ export default {
         padding-top: 20px;
         max-width: 1280px;
         margin-top: 110px;
+
+        @media screen and (max-width: $media-iPad) {
+            margin-top: 169px;
+        }
 
         &::after {
             content: '';

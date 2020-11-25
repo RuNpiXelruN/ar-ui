@@ -1,13 +1,13 @@
 <template>
     <div class="event-card-wrapper" :class="cardBoxShadow" @mouseover="showViewEvent(true)" @mouseleave="showViewEvent(false)">
-        <div class="menu-dots" @click="handleShowMenu"></div>
-        <div class="card-menu-wrapper" :class="menuOpenCSS" @mouseleave="handleShowMenu">
+        <div class="menu-dots" @click="toggleMenu"></div>
+        <div class="card-menu-wrapper" :class="menuOpenCSS" @mouseleave="closeMenu">
             <div class="card-menu-triangle"></div>
-            <a href=""><div>Create campaign</div></a>
-            <a href=""><div>Import ticket sales</div></a>
-            <a href=""><div>Edit event details</div></a>
-            <a href=""><div>Merge event</div></a>
-            <a href=""><div>Delete event</div></a>
+            <a href="" @click.prevent="closeMenu"><div>Create campaign</div></a>
+            <a href="" @click.prevent="closeMenu"><div>Import ticket sales</div></a>
+            <a href="" @click.prevent="closeMenu"><div>Edit event details</div></a>
+            <a href="" @click.prevent="closeMenu"><div>Merge event</div></a>
+            <a href="" @click.prevent="closeMenu"><div>Delete event</div></a>
         </div>
         <div class="card-image-wrapper">
             <div class="view-event-wrapper" :class="viewEventCSS">
@@ -62,8 +62,11 @@ export default {
         }
     },
     methods: {
-        handleShowMenu() {
-            return this.menuOpen = !this.menuOpen
+        toggleMenu() {
+            this.menuOpen = !this.menuOpen
+        },
+        closeMenu() {
+            this.menuOpen = false
         },
         showViewEvent(bool) {
             this.showEvent = bool
@@ -73,6 +76,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 
+$media-mob: 478px;
 $menu-border-grey: #D4D8E1;
 $card-border-grey: #DCDEE4;
 $card-primary-text-grey: #43516B;
@@ -100,6 +104,11 @@ $card-primary-text-grey: #43516B;
     margin: 15px 20px;
     position: relative;
     transition: all 0.3s ease;
+
+    @media screen and (max-width: $media-mob) {
+        margin: 10px 0px;
+        width: 300px;
+    }
 
     .menu-dots {
         background: url('~@/assets/menu-dots.svg') no-repeat;
@@ -171,6 +180,10 @@ $card-primary-text-grey: #43516B;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
 
+        @media screen and (max-width: $media-mob) {
+            height: 163px;
+        }
+
         img {
             position: absolute;
             min-width: 1000%;
@@ -223,11 +236,19 @@ $card-primary-text-grey: #43516B;
         padding: 28px 0;
         position: relative;
 
+        @media screen and (max-width: $media-mob) {
+            padding: 20px 0 15px;
+        }
+
         .card-copy {
             @include flexCol;;
             align-items: flex-start;
             width: 320px;
             overflow: hidden;
+
+            @media screen and (max-width: $media-mob) {
+                width: 250px;
+            }
 
             .card-logo-wrapper {
                 width: 30px;
@@ -244,6 +265,14 @@ $card-primary-text-grey: #43516B;
                 background-size: 15px 15px;
                 background-position: 8px 7px;
                 z-index: 10;
+
+                @media screen and (max-width: $media-mob) {
+                    height: 23px;
+                    width: 23px;
+                    top: -12px;
+                    background-size: 12px 12px;
+                    background-position: 6px 5px;
+                }
             }
 
             h3 {
@@ -259,6 +288,11 @@ $card-primary-text-grey: #43516B;
                 text-overflow: ellipsis;
                 width: 320px;
                 margin-bottom: 5px;
+
+                @media screen and (max-width: $media-mob) {
+                    width: 260px;
+                    margin-bottom: 0;
+                }
             }
             p {
                 @include fontBody;

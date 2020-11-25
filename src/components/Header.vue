@@ -27,6 +27,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 
+$media-iPad: 767px;
+$media-mob: 478px;
 $card-border-grey: #DCDEE4;
 $input-green: #2DC26A;
 
@@ -53,18 +55,36 @@ $input-green: #2DC26A;
     z-index: 20;
     background: #F6F9FC;
 
+    @media screen and (max-width: $media-iPad) {
+        padding-top: 6px;
+        padding-bottom: 31px;
+    }
+
+    @media screen and (max-width: $media-mob) {
+        width: 95%;
+    }
+
     h1 {
         @include fontBody;
         font-size: 30px;
         line-height: 33px;
         color: #43516B;
         text-align: left;
+
+        @media screen and (max-width: $media-iPad) {
+            width: 100%;
+            margin-bottom: 28px;
+        }
     }
 
     .search-header-wrapper {
         @include flexRow;
         align-items: center;
         justify-content: flex-end;
+
+        @media screen and (max-width: $media-iPad) {
+            width: 100%;
+        }
 
         .input-container {
             @include fontBody;
@@ -76,6 +96,10 @@ $input-green: #2DC26A;
             border: 1px solid $card-border-grey;
             background: white;
             margin-right: 10px;
+
+            @media screen and (max-width: $media-iPad) {
+                flex-grow: 1;
+            }
 
             .search-icon {
                 background: url('~@/assets/search-icon.svg') no-repeat;
@@ -96,6 +120,10 @@ $input-green: #2DC26A;
                 padding-left: 36px;
                 margin-top: 0;        /* to remove default top/bottom margin in Safari */
                 margin-bottom: 0;     /* to remove default top/bottom margin in Safari */
+
+                @media screen and (max-width: $media-iPad) {
+                    width: 100%;
+                }
 
                 &::placeholder {      /* Chrome, Firefox, Opera, Safari 10.1+ */
                     color: #B4B9C4;
@@ -124,6 +152,18 @@ $input-green: #2DC26A;
             border: none;
             cursor: pointer;
             transition: background 0.2s ease;
+
+            @media screen and (max-width: $media-iPad) {
+                padding: 19px 50px;
+
+                .create-button-span, img {
+                    display: none;
+                }
+            }
+            
+            @media screen and (max-width: $media-mob) {
+                padding: 19px 20px;
+            }
 
             &:hover {
                 background: #592F9D;
