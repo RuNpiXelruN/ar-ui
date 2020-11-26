@@ -51,7 +51,8 @@ export default {
         }
         
         @media screen and (max-width: $media-mob) {
-            margin-top: 1px;
+            margin-top: 0px;
+            padding-top: 23px;
         }
 
         &::after {
