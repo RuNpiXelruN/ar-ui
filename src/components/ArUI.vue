@@ -29,6 +29,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     
+    $media-mid: 991px;
     $media-iPad: 767px;
     $media-mob: 478px;
 
@@ -46,8 +47,9 @@ export default {
             margin-top: 164px;
         }
 
-        @media screen and (max-width: $media-iPad) and (orientation: landscape) {
+        @media screen and (max-width: $media-mid) and (orientation: landscape) {
             margin-top: 0px;
+            padding-top: 17px;
         }
         
         @media screen and (max-width: $media-mob) {

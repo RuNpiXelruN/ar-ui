@@ -29,6 +29,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 
+$media-mid: 991px;
 $media-iPad: 767px;
 $media-mob: 478px;
 $header-grey: #43516B;
@@ -55,7 +56,7 @@ $input-green: #2DC26A;
     z-index: 20;
     background: #F6F9FC;
     
-    @media screen and (max-width: $media-iPad) and (orientation: landscape) {
+    @media screen and (max-width: $media-mid) and (orientation: landscape) {
         position: relative;
     }
     
