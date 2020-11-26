@@ -93,7 +93,7 @@ $input-green: #2DC26A;
 
             @media screen and (max-width: $media-iPad) {
                 width: 100%;
-                margin-bottom: 28px;
+                margin-bottom: 25px;
             }
         }
 
