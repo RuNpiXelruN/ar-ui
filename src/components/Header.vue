@@ -80,7 +80,7 @@ $input-green: #2DC26A;
 
         @media screen and (max-width: $media-mob) {
             width: 95%;
-            padding-top: 2px;
+            padding-top: 6px;
             position: relative;
         }
 
